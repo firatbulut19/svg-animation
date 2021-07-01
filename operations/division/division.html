@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Division</title>
+</head>
+
+<body>
+  <h1>Division</h1>
+
+  <div id="here" class="container page-container">
+    <div class="container svg-container row">
+      <svg class="svg" id="my-svg1" width="auto" height="auto" border="solid">
+        <defs>
+          <marker id="arrow-1" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" />
+          </marker>
+        </defs>
+        <g>
+          <g id="ruler">
+            <rect x="50" y="0" width="30" height="350" rx="6" ry="6"
+              style="fill:blue;stroke:pink;stroke-width:1;fill-opacity:0.2;stroke-opacity:0.9" />
+            <rect x="65" y="320" width="310" height="30" transform="rotate(3)" rx="6" ry="6"
+              style="fill:blue;stroke:pink;stroke-width:1;fill-opacity:0.2;stroke-opacity:0.9" />
+            <rect x="80" y="0" width="25" height="300" rx="6" ry="6"
+              style="fill:green;stroke:pink;stroke-width:1;fill-opacity:0.2;stroke-opacity:0.9" />
+            <text class="large" id="equation"> </text>
+
+          </g>
+
+          <g id="balls">
+            <circle class="ball" id="dummy-ball" stroke="black" stroke-width="1" fill="blue" cx="70" cy="160" r="5"
+              hidden />
+          </g>
+          <g id="marks">
+            <line class="line" id="dummy-line" style="stroke:rgb(0,0,0);stroke-width:1" hidden>
+          </g>
+          <g id="numbers">
+            <text class="small" id="dummy-text"></text>
+          </g>
+          <g id="equation">
+            <circle class="circle" id="divisor-circle-eq" cx="400" cy="120" r="17"
+            style="fill:blue;stroke:black;stroke-width:1;fill-opacity:0.5;stroke-opacity:0.9" />
+            <circle class="circle" id="divisor-circle-eq" cx="450" cy="120" r="17"
+              style="fill:green;stroke:black;stroke-width:1;fill-opacity:0.5;stroke-opacity:0.9" />
+            <circle class="circle" id="dividend-circle-eq" cx="500" cy="120" r="17"
+              style="fill:red;stroke:black;stroke-width:1;fill-opacity:0.5;stroke-opacity:0.9" />
+            <circle class="circle" id="remainder-circle-eq" cx="550" cy="120" r="17"
+              style="fill:yellow;stroke:black;stroke-width:1;fill-opacity:0.5;stroke-opacity:0.9" />
+            <text class="large" id="total-text-eq" x="390" y="125"> </text>
+            <text class="large" id="equal" x="470" y="125"> </text>
+            <text class="large" id="plus" x="520" y="125"> </text>
+            <text class="large" id="divides" x="420" y="125"> </text>
+
+            <text class="large" id="divisor-text-eq" x="440" y="125"> </text>
+            <text class="large" id="dividend-text-eq" x="490" y="125"> </text>
+            <text class="large" id="remainder-text-eq" x="540" y="125"> </text>
+
+          </g>
+        </g>
+
+      </svg>
+      <form id="svg-1-form-1" onsubmit="on_submit(event)" class="form-config col-6 row float-left">
+
+        <div class="col-4 labels">
+          Total balls: <br>
+          Divisor: <br>
+          Color: <br>
+
+        </div>
+        <div class="col-1 values">
+          <div>30</div>
+          <div>7</div>
+
+        </div>
+        <div id="svg-1-inputs-2" class="col-6 inputs">
+          <input class="ball-config" type="range" name="total" min="1" max="150" value="30">
+          <input class="ball-config" type="range" name="divisor" min="2" max="20" value="7">
+          <input class="ball-config" type="text" name="color" value="blue">
+
+        </div>
+        <input type="submit" value="update">
+      </form>
+    </div>
+    <div><a href="../../index.html">Go back</a></div>
+  </div>
+
+  <script src="/node_modules/animejs/lib/anime.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="division.js"></script>
+</body>
+
+</html>

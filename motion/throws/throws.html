@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Throws</title>
+</head>
+
+<body>
+  <h1>Throws</h1>
+
+  <div id="here" class="container page-container">
+    <div class="container svg-container row">
+      <svg class="svg" id="my-svg1" width="auto" height="auto" border="solid">
+        <defs>
+          <marker id="arrow-1" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" />
+          </marker>
+        </defs>
+        <g>
+          <g id="svg-1-anim-1">
+            <circle class="ball" id="svg-1-ball-1" stroke="black" stroke-width="1" fill="blue"/>
+            <line class="line" id="svg-1-line-1" marker-end="url(#arrow-1)" style="stroke:rgb(0,0,0);stroke-width:2">
+            </line>
+          </g>
+          <g>
+            <text class="large" id="svg-1-speed-1"> </text>
+            <text class="large" id="svg-1-vector-1"> </text>
+            <text class="large" id="svg-1-time-1"> </text>
+            <text class="large" id="svg-1-height-1"> </text>
+
+          </g>
+
+          <g>
+            <line class="line" id="svg-1-line-2" style="stroke:rgb(0,0,0);stroke-width:2"></line>
+          </g>
+          <g id="temp-lines">
+            <line class="line" id="svg-1-line-2" style="stroke:rgb(0,0,0);stroke-width:2"></line>
+            <circle class="ball" id="svg-1-ball-dummy" stroke="black" stroke-width="1" fill="blue"/>
+          </g>
+        </g>
+
+        <text class="small" id="svg-1-time"> </text>
+
+
+      </svg>
+      <form id="svg-1-form-1" onsubmit="on_submit(event)" class="form-config col-6 row float-left">
+
+        <div class="col-4 labels">
+          Mass:(kg) <br>
+          Velocity:(m/s) <br>
+          Angle:(°) <br>
+          Elasticity: <br>
+          Gravity:(m/s²) <br>
+          Show Trace
+
+        </div>
+        <div class="col-2 values">
+          <div>10</div>
+          <div>1</div>
+          <div>30</div>
+          <div>1</div>
+          <div>10</div>
+          <div></div>
+
+        </div>
+        <div id="svg-1-inputs-2" class="col-6 inputs">
+          <input class="ball-config" type="range" name="mass" min="1" max="100" value="10">
+          <input class="ball-config" type="range" name="velocity" min="0" max="10" value="1">
+          <input class="ball-config" type="range" name="angle" min="0" max="360" value="30">
+          <input class="ball-config" type="range" name="elasticity" min="0" max="1" value="1" step="0.01">
+          <input class="ball-config" type="range" name="gravity" min="-1" max="20" value="10" step="0.01">
+          <input class="ball-config" type="checkbox" name="show-trace" checked>
+
+        </div>
+        <input type="submit" value="update">
+      </form>
+
+      <div class="buttons col-4 row">
+        <button class="button start-button col">
+          animate
+        </button>
+        <button class="button pause-button col">
+          pause
+        </button>
+        <button class="button reset-button col">
+          reset
+        </button>
+        <button class="button resume-button col">
+          resume
+        </button>
+      </div>
+    </div>
+    <div><a href="../../index.html">Go back</a></div>
+  </div>
+
+  <script src="/node_modules/animejs/lib/anime.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="throws.js"></script>
+</body>
+
+</html>
