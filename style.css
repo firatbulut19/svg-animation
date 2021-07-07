@@ -1,6 +1,11 @@
 body {
   background-color: rgb(200, 241, 228);
+  display: grid;
+  grid-template-rows: 60px 30px 1fr 60px 30px;
 }  
+#home {
+  display: block;
+}
 
 .container {
   width: auto;
@@ -18,10 +23,13 @@ body {
 }
 
 .page-container {
-  margin: auto;
-  width: 70%;
-  margin-top: 30px;
   text-align: center;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  height: 100%;
+
+  overflow-y: scroll;
 }
 
 .svg {
@@ -42,6 +50,10 @@ body {
 .form-config {
   margin-top: 10px;
   width: 40%;
+}
+
+input {
+  margin: auto;
 }
 
 .labels {
@@ -65,8 +77,9 @@ body {
   margin-right: 20px;
 }
 
-h1 {
+h3 {
   text-align: center;
+  margin: 10px;
 }
 
 .a {
@@ -78,7 +91,41 @@ footer {
   bottom: 0;
   width: 100%;
   height: auto;
-  background-color: olivedrab;
+  background-color: rgb(166, 197, 104);
   color: black;
   text-align: center;
+}
+
+header {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgb(238, 196, 210);
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+h5 {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+h2 {
+  margin-bottom: 0;
+}
+.footnote {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+  margin-top: -25px;
+  margin-right: 25px;
+}
+
+.overview {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 90%;
 }

@@ -5,14 +5,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>my document</title>
 </head>
 
-<body>
-  <h1>Visualization of Educational Concepts</h1>
+
+
+<body id="home">
+  <header>
+    <h5>Bogazici University Computer Engineering <br>
+      Senior Project:</h5>
+    <h2>Visualization of Educational Concepts</h2>
+    <h5>Implemented by: Fırat Bulut <br>
+      Advisor: Haluk Bingöl</h4>
+  </header>
   <div class="container page-container">
+    <div class="overview">This website is designed and implemented by Fırat Bulut as a senior project for Bogazici
+      University Computer Engineering.
+      The project advisor is Haluk Bingöl, and the content is largely inspired by his earlier works in <a
+        href="http://meraklisina.com/">meraklisina.com</a>.
+      The animations are implemented using SVG (Scalable Vector Graphics) elements and JavaScript. Source code and a
+      project poster
+      can be reached from <a href="https://github.com/firatbulut19/svg-animation">here</a>. <br>
+      Available animations can be reached below.
+    </div>
     <div><a class="a" href="motion/basic-motion/basic-motion.html">2D motion</a></div>
     <div><a class="a" href="motion/2d-collision/2d-collision.html ">2D collision</a></div>
     <div><a class="a" href="motion/plane/plane.html">Inclined plane</a></div>
@@ -20,11 +38,19 @@
     <div><a class="a" href="operations/division/division.html">Division</a></div>
   </div>
 
+  <footer>
+
+    <div class="footnote">
+      inspired by
+      <a href="http://meraklisina.com/">meraklisina.com</a>
+    </div>
+    implemented by Fırat Bulut <br>
+    July 2021 <br>
+    <a href="https://github.com/firatbulut19/svg-animation" style="color:black">Github page</a>
+
+  </footer>
   <script src="node_modules/animejs/lib/anime.min.js"></script>
+
 </body>
-<footer>
-  implemented by fırat bulut <br>
-  <a href="https://github.com/firatbulut19/svg-animation" style="color:black">Github page</a>
-  
-</footer>
+
 </html>
